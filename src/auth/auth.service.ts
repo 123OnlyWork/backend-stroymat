@@ -6,10 +6,11 @@ import {
 	NotFoundException,
 	UnauthorizedException
 } from '@nestjs/common'
-import { AuthDto } from '../dto/auth.dto';
+import { AuthDto } from './dto/auth.dto';
 import { User } from '@prisma/client'
 import { hash, verify } from 'argon2'
 import { JwtService } from '@nestjs/jwt'
+
 
 
 @Injectable()
