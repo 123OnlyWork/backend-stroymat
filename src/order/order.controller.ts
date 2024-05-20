@@ -10,17 +10,23 @@ import {
 import { Auth } from 'src/auth/decorators/auth.decorator'
 import { CurrentUser } from 'src/auth/decorators/user.decorator'
 import { OrderDto } from './order.dto'
-import { OrderService } from './order.service'
+//import { OrderService } from './order.service'
+import { PaymentStatusDto } from './payment-status.dto'
 
-
-@Controller('orders')
+/*@Controller('orders')
 export class OrderController {
 	constructor(private readonly orderService: OrderService) {}
 
 	@Get()
+	@Auth('admin')
+	getAll() {
+		return this.orderService.getAll()
+	}
+
+	@Get('by-user')
 	@Auth()
-	getAll(@CurrentUser('id') userId: number) {
-		return this.orderService.getAll(userId)
+	getByUserId(@CurrentUser('id') userId: number) {
+		return this.orderService.getByUserId(userId)
 	}
 
 	@UsePipes(new ValidationPipe())
@@ -31,5 +37,9 @@ export class OrderController {
 		return this.orderService.placeOrder(dto, userId)
 	}
 
-	
-}
+	@HttpCode(200)
+	@Post('status')
+	async updateStatus(@Body() dto: PaymentStatusDto) {
+		return this.orderService.updateStatus(dto)
+	}
+}*/
