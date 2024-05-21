@@ -47,7 +47,6 @@ let ProductController = class ProductController {
         return this.productService.byId(+id);
     }
 };
-exports.ProductController = ProductController;
 __decorate([
     (0, common_1.UsePipes)(new common_1.ValidationPipe()),
     (0, common_1.Get)(),
@@ -114,8 +113,9 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], ProductController.prototype, "getProduct", null);
-exports.ProductController = ProductController = __decorate([
+ProductController = __decorate([
     (0, common_1.Controller)('products'),
     __metadata("design:paramtypes", [product_service_1.ProductService])
 ], ProductController);
+exports.ProductController = ProductController;
 //# sourceMappingURL=product.controller.js.map

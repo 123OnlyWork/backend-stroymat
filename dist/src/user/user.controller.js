@@ -32,7 +32,6 @@ let UserController = class UserController {
         return this.userService.toggleFavorite(id, +productId);
     }
 };
-exports.UserController = UserController;
 __decorate([
     (0, common_1.Get)('profile'),
     (0, auth_decorator_1.Auth)(),
@@ -62,8 +61,9 @@ __decorate([
     __metadata("design:paramtypes", [Number, String]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "toggleFavorite", null);
-exports.UserController = UserController = __decorate([
+UserController = __decorate([
     (0, common_1.Controller)('users'),
     __metadata("design:paramtypes", [user_service_1.UserService])
 ], UserController);
+exports.UserController = UserController;
 //# sourceMappingURL=user.controller.js.map

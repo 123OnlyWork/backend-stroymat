@@ -21,7 +21,6 @@ let StatisticsController = class StatisticsController {
         return this.statisticsService.getMain();
     }
 };
-exports.StatisticsController = StatisticsController;
 __decorate([
     (0, common_1.Get)('main'),
     (0, auth_decorator_1.Auth)('admin'),
@@ -29,8 +28,9 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], StatisticsController.prototype, "getMainStatistics", null);
-exports.StatisticsController = StatisticsController = __decorate([
+StatisticsController = __decorate([
     (0, common_1.Controller)('statistics'),
     __metadata("design:paramtypes", [statistics_service_1.StatisticsService])
 ], StatisticsController);
+exports.StatisticsController = StatisticsController;
 //# sourceMappingURL=statistics.controller.js.map

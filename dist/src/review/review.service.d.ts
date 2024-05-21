@@ -6,46 +6,17 @@ export declare class ReviewService {
     private productService;
     constructor(prisma: PrismaService, productService: ProductService);
     getAll(): Promise<{
-        product?: import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            name: string;
-            slug: string;
-            description: string;
-            price: number;
-            images: string[];
-            categoryId: number;
-            userId: number;
-        }, unknown> & {};
-        id?: number;
         createdAt?: Date;
         updatedAt?: Date;
+        user?: import(".prisma/client").User;
+        id?: number;
         userId?: number;
-        user?: import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            email: string;
-            password: string;
-            isAdmin: boolean;
-            name: string;
-            avatarPath: string;
-            phone: string;
-        }, unknown> & {};
         rating?: number;
         text?: string;
         productId?: number;
+        product?: import(".prisma/client").Product;
     }[]>;
-    create(userId: number, dto: ReviewDto, productId: number): Promise<import("@prisma/client/runtime").GetResult<{
-        id: number;
-        createdAt: Date;
-        updatedAt: Date;
-        rating: number;
-        text: string;
-        userId: number;
-        productId: number;
-    }, unknown> & {}>;
+    create(userId: number, dto: ReviewDto, productId: number): Promise<import(".prisma/client").Review>;
     getAverageValueByProductId(productId: number): Promise<{
         rating: number;
     }>;

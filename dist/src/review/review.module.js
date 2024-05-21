@@ -17,12 +17,12 @@ const review_controller_1 = require("./review.controller");
 const review_service_1 = require("./review.service");
 let ReviewModule = class ReviewModule {
 };
-exports.ReviewModule = ReviewModule;
-exports.ReviewModule = ReviewModule = __decorate([
+ReviewModule = __decorate([
     (0, common_1.Module)({
         controllers: [review_controller_1.ReviewController],
         providers: [review_service_1.ReviewService, prisma_service_1.PrismaService, product_service_1.ProductService],
         imports: [product_module_1.ProductModule, pagination_module_1.PaginationModule, category_module_1.CategoryModule]
     })
 ], ReviewModule);
+exports.ReviewModule = ReviewModule;
 //# sourceMappingURL=review.module.js.map

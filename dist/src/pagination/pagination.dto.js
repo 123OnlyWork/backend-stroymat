@@ -13,7 +13,6 @@ exports.PaginationDto = void 0;
 const class_validator_1 = require("class-validator");
 class PaginationDto {
 }
-exports.PaginationDto = PaginationDto;
 __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsString)(),
@@ -24,4 +23,5 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], PaginationDto.prototype, "perPage", void 0);
+exports.PaginationDto = PaginationDto;
 //# sourceMappingURL=pagination.dto.js.map

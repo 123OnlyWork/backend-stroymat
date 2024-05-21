@@ -1,3 +1,4 @@
+import { Prisma } from '@prisma/client';
 import { CategoryService } from 'src/category/category.service';
 import { PaginationService } from 'src/pagination/pagination.service';
 import { PrismaService } from 'src/prisma.service';
@@ -10,7 +11,6 @@ export declare class ProductService {
     constructor(prisma: PrismaService, paginationService: PaginationService, categoryService: CategoryService);
     getAll(dto?: GetAllProductDto): Promise<{
         products: {
-            id?: number;
             createdAt?: Date;
             updatedAt?: Date;
             name?: string;
@@ -18,50 +18,14 @@ export declare class ProductService {
             description?: string;
             price?: number;
             images?: string[];
+            orderItems?: import(".prisma/client").OrderItem[];
+            reviews?: import(".prisma/client").Review[];
+            category?: import(".prisma/client").Category;
+            user?: import(".prisma/client").User;
+            id?: number;
             categoryId?: number;
             userId?: number;
-            orderItems?: (import("@prisma/client/runtime").GetResult<{
-                id: number;
-                createdAt: Date;
-                updatedAt: Date;
-                quantity: number;
-                price: number;
-                orderId: number;
-                productId: number;
-            }, unknown> & {})[];
-            reviews?: (import("@prisma/client/runtime").GetResult<{
-                id: number;
-                createdAt: Date;
-                updatedAt: Date;
-                rating: number;
-                text: string;
-                userId: number;
-                productId: number;
-            }, unknown> & {})[];
-            category?: import("@prisma/client/runtime").GetResult<{
-                id: number;
-                createdAt: Date;
-                updatedAt: Date;
-                name: string;
-                slug: string;
-            }, unknown> & {};
-            user?: import("@prisma/client/runtime").GetResult<{
-                id: number;
-                createdAt: Date;
-                updatedAt: Date;
-                email: string;
-                password: string;
-                isAdmin: boolean;
-                name: string;
-                avatarPath: string;
-                phone: string;
-            }, unknown> & {};
-            _count?: {
-                orderItems: number;
-                reviews: number;
-                category: number;
-                user: number;
-            };
+            _count?: Prisma.ProductCountOutputType;
         }[];
         length: number;
     }>;
@@ -72,7 +36,6 @@ export declare class ProductService {
     private getPriceFilter;
     private getCategoryFilter;
     byId(id: number): Promise<{
-        id?: number;
         createdAt?: Date;
         updatedAt?: Date;
         name?: string;
@@ -80,53 +43,16 @@ export declare class ProductService {
         description?: string;
         price?: number;
         images?: string[];
+        orderItems?: import(".prisma/client").OrderItem[];
+        reviews?: import(".prisma/client").Review[];
+        category?: import(".prisma/client").Category;
+        user?: import(".prisma/client").User;
+        id?: number;
         categoryId?: number;
         userId?: number;
-        orderItems?: (import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            quantity: number;
-            price: number;
-            orderId: number;
-            productId: number;
-        }, unknown> & {})[];
-        reviews?: (import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            rating: number;
-            text: string;
-            userId: number;
-            productId: number;
-        }, unknown> & {})[];
-        category?: import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            name: string;
-            slug: string;
-        }, unknown> & {};
-        user?: import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            email: string;
-            password: string;
-            isAdmin: boolean;
-            name: string;
-            avatarPath: string;
-            phone: string;
-        }, unknown> & {};
-        _count?: {
-            orderItems: number;
-            reviews: number;
-            category: number;
-            user: number;
-        };
+        _count?: Prisma.ProductCountOutputType;
     }>;
     bySlug(slug: string): Promise<{
-        id?: number;
         createdAt?: Date;
         updatedAt?: Date;
         name?: string;
@@ -134,53 +60,16 @@ export declare class ProductService {
         description?: string;
         price?: number;
         images?: string[];
+        orderItems?: import(".prisma/client").OrderItem[];
+        reviews?: import(".prisma/client").Review[];
+        category?: import(".prisma/client").Category;
+        user?: import(".prisma/client").User;
+        id?: number;
         categoryId?: number;
         userId?: number;
-        orderItems?: (import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            quantity: number;
-            price: number;
-            orderId: number;
-            productId: number;
-        }, unknown> & {})[];
-        reviews?: (import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            rating: number;
-            text: string;
-            userId: number;
-            productId: number;
-        }, unknown> & {})[];
-        category?: import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            name: string;
-            slug: string;
-        }, unknown> & {};
-        user?: import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            email: string;
-            password: string;
-            isAdmin: boolean;
-            name: string;
-            avatarPath: string;
-            phone: string;
-        }, unknown> & {};
-        _count?: {
-            orderItems: number;
-            reviews: number;
-            category: number;
-            user: number;
-        };
+        _count?: Prisma.ProductCountOutputType;
     }>;
     byCategory(categorySlug: string): Promise<{
-        id?: number;
         createdAt?: Date;
         updatedAt?: Date;
         name?: string;
@@ -188,53 +77,16 @@ export declare class ProductService {
         description?: string;
         price?: number;
         images?: string[];
+        orderItems?: import(".prisma/client").OrderItem[];
+        reviews?: import(".prisma/client").Review[];
+        category?: import(".prisma/client").Category;
+        user?: import(".prisma/client").User;
+        id?: number;
         categoryId?: number;
         userId?: number;
-        orderItems?: (import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            quantity: number;
-            price: number;
-            orderId: number;
-            productId: number;
-        }, unknown> & {})[];
-        reviews?: (import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            rating: number;
-            text: string;
-            userId: number;
-            productId: number;
-        }, unknown> & {})[];
-        category?: import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            name: string;
-            slug: string;
-        }, unknown> & {};
-        user?: import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            email: string;
-            password: string;
-            isAdmin: boolean;
-            name: string;
-            avatarPath: string;
-            phone: string;
-        }, unknown> & {};
-        _count?: {
-            orderItems: number;
-            reviews: number;
-            category: number;
-            user: number;
-        };
+        _count?: Prisma.ProductCountOutputType;
     }[]>;
     getSimilar(id: number): Promise<{
-        id?: number;
         createdAt?: Date;
         updatedAt?: Date;
         name?: string;
@@ -242,74 +94,16 @@ export declare class ProductService {
         description?: string;
         price?: number;
         images?: string[];
+        orderItems?: import(".prisma/client").OrderItem[];
+        reviews?: import(".prisma/client").Review[];
+        category?: import(".prisma/client").Category;
+        user?: import(".prisma/client").User;
+        id?: number;
         categoryId?: number;
         userId?: number;
-        orderItems?: (import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            quantity: number;
-            price: number;
-            orderId: number;
-            productId: number;
-        }, unknown> & {})[];
-        reviews?: (import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            rating: number;
-            text: string;
-            userId: number;
-            productId: number;
-        }, unknown> & {})[];
-        category?: import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            name: string;
-            slug: string;
-        }, unknown> & {};
-        user?: import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            email: string;
-            password: string;
-            isAdmin: boolean;
-            name: string;
-            avatarPath: string;
-            phone: string;
-        }, unknown> & {};
-        _count?: {
-            orderItems: number;
-            reviews: number;
-            category: number;
-            user: number;
-        };
+        _count?: Prisma.ProductCountOutputType;
     }[]>;
     create(): Promise<number>;
-    update(id: number, dto: ProductDto): Promise<import("@prisma/client/runtime").GetResult<{
-        id: number;
-        createdAt: Date;
-        updatedAt: Date;
-        name: string;
-        slug: string;
-        description: string;
-        price: number;
-        images: string[];
-        categoryId: number;
-        userId: number;
-    }, unknown> & {}>;
-    delete(id: number): Promise<import("@prisma/client/runtime").GetResult<{
-        id: number;
-        createdAt: Date;
-        updatedAt: Date;
-        name: string;
-        slug: string;
-        description: string;
-        price: number;
-        images: string[];
-        categoryId: number;
-        userId: number;
-    }, unknown> & {}>;
+    update(id: number, dto: ProductDto): Promise<import(".prisma/client").Product>;
+    delete(id: number): Promise<import(".prisma/client").Product>;
 }

@@ -14,11 +14,11 @@ const statistics_controller_1 = require("./statistics.controller");
 const statistics_service_1 = require("./statistics.service");
 let StatisticsModule = class StatisticsModule {
 };
-exports.StatisticsModule = StatisticsModule;
-exports.StatisticsModule = StatisticsModule = __decorate([
+StatisticsModule = __decorate([
     (0, common_1.Module)({
         controllers: [statistics_controller_1.StatisticsController],
         providers: [statistics_service_1.StatisticsService, prisma_service_1.PrismaService, user_service_1.UserService]
     })
 ], StatisticsModule);
+exports.StatisticsModule = StatisticsModule;
 //# sourceMappingURL=statistics.module.js.map

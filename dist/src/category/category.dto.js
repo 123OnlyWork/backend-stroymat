@@ -13,9 +13,9 @@ exports.CategoryDto = void 0;
 const class_validator_1 = require("class-validator");
 class CategoryDto {
 }
-exports.CategoryDto = CategoryDto;
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CategoryDto.prototype, "name", void 0);
+exports.CategoryDto = CategoryDto;
 //# sourceMappingURL=category.dto.js.map

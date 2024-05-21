@@ -13,7 +13,6 @@ exports.UserDto = void 0;
 const class_validator_1 = require("class-validator");
 class UserDto {
 }
-exports.UserDto = UserDto;
 __decorate([
     (0, class_validator_1.IsEmail)(),
     __metadata("design:type", String)
@@ -38,4 +37,5 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], UserDto.prototype, "phone", void 0);
+exports.UserDto = UserDto;
 //# sourceMappingURL=user.dto.js.map

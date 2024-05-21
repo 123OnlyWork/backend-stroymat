@@ -1,1 +1,2 @@
-export declare const CurrentUser: (...dataOrPipes: ("id" | "createdAt" | "updatedAt" | "name" | "email" | "password" | "isAdmin" | "avatarPath" | "phone" | import("@nestjs/common").PipeTransform<any, any> | import("@nestjs/common").Type<import("@nestjs/common").PipeTransform<any, any>>)[]) => ParameterDecorator;
+import { User } from '@prisma/client';
+export declare const CurrentUser: (...dataOrPipes: (keyof User | import("@nestjs/common").PipeTransform<any, any> | import("@nestjs/common").Type<import("@nestjs/common").PipeTransform<any, any>>)[]) => ParameterDecorator;

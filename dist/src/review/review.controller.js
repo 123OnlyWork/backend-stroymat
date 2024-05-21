@@ -32,7 +32,6 @@ let ReviewController = class ReviewController {
         return this.reviewService.getAverageValueByProductId(+productId);
     }
 };
-exports.ReviewController = ReviewController;
 __decorate([
     (0, common_1.UsePipes)(new common_1.ValidationPipe()),
     (0, common_1.Get)(),
@@ -60,8 +59,9 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], ReviewController.prototype, "getAverageByProduct", null);
-exports.ReviewController = ReviewController = __decorate([
+ReviewController = __decorate([
     (0, common_1.Controller)('reviews'),
     __metadata("design:paramtypes", [review_service_1.ReviewService])
 ], ReviewController);
+exports.ReviewController = ReviewController;
 //# sourceMappingURL=review.controller.js.map

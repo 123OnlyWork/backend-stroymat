@@ -17,8 +17,8 @@ let OnlyAdminGuard = class OnlyAdminGuard {
         return user.isAdmin;
     }
 };
-exports.OnlyAdminGuard = OnlyAdminGuard;
-exports.OnlyAdminGuard = OnlyAdminGuard = __decorate([
+OnlyAdminGuard = __decorate([
     (0, common_1.Injectable)()
 ], OnlyAdminGuard);
+exports.OnlyAdminGuard = OnlyAdminGuard;
 //# sourceMappingURL=admin.guard.js.map

@@ -4,61 +4,21 @@ export declare class UserController {
     private readonly userService;
     constructor(userService: UserService);
     getProfile(id: number): Promise<{
-        id?: number;
         createdAt?: Date;
         updatedAt?: Date;
         name?: string;
-        reviews?: (import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            rating: number;
-            text: string;
-            userId: number;
-            productId: number;
-        }, unknown> & {})[];
-        _count?: {
-            orders: number;
-            reviews: number;
-            favorites: number;
-        };
+        reviews?: import(".prisma/client").Review[];
+        id?: number;
         email?: string;
         password?: string;
         isAdmin?: boolean;
         avatarPath?: string;
         phone?: string;
-        orders?: (import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            status: import(".prisma/client").EnumOrderStatus;
-            total: number;
-            userId: number;
-        }, unknown> & {})[];
-        favorites: (import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            name: string;
-            slug: string;
-            description: string;
-            price: number;
-            images: string[];
-            categoryId: number;
-            userId: number;
-        }, unknown> & {})[];
+        orders?: import(".prisma/client").Order[];
+        favorites: import(".prisma/client").Product[];
+        _count?: import(".prisma/client").Prisma.UserCountOutputType;
     }>;
-    getNewTokens(id: number, dto: UserDto): Promise<import("@prisma/client/runtime").GetResult<{
-        id: number;
-        createdAt: Date;
-        updatedAt: Date;
-        email: string;
-        password: string;
-        isAdmin: boolean;
-        name: string;
-        avatarPath: string;
-        phone: string;
-    }, unknown> & {}>;
+    getNewTokens(id: number, dto: UserDto): Promise<import(".prisma/client").User>;
     toggleFavorite(id: number, productId: string): Promise<{
         message: string;
     }>;

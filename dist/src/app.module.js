@@ -23,8 +23,7 @@ const statistics_module_1 = require("./statistics/statistics.module");
 const user_module_1 = require("./user/user.module");
 let AppModule = class AppModule {
 };
-exports.AppModule = AppModule;
-exports.AppModule = AppModule = __decorate([
+AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
             serve_static_1.ServeStaticModule.forRoot({
@@ -44,4 +43,5 @@ exports.AppModule = AppModule = __decorate([
         providers: [app_service_1.AppService, prisma_service_1.PrismaService]
     })
 ], AppModule);
+exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map

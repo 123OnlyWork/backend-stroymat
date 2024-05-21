@@ -40,7 +40,6 @@ let CategoryController = class CategoryController {
         return this.categoryService.delete(+id);
     }
 };
-exports.CategoryController = CategoryController;
 __decorate([
     (0, common_1.Get)(),
     __metadata("design:type", Function),
@@ -90,8 +89,9 @@ __decorate([
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], CategoryController.prototype, "delete", null);
-exports.CategoryController = CategoryController = __decorate([
+CategoryController = __decorate([
     (0, common_1.Controller)('categories'),
     __metadata("design:paramtypes", [category_service_1.CategoryService])
 ], CategoryController);
+exports.CategoryController = CategoryController;
 //# sourceMappingURL=category.controller.js.map

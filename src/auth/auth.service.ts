@@ -12,6 +12,7 @@ import { PrismaService } from 'src/prisma.service'
 import { UserService } from 'src/user/user.service'
 import { AuthDto } from './dto/auth.dto'
 
+
 @Injectable()
 export class AuthService {
 	constructor(
@@ -58,7 +59,7 @@ export class AuthService {
 		const user = await this.prisma.user.create({
 			data: {
 				email: dto.email,
-				name: faker.person.firstName(),
+				name: faker.name.firstName(),
 				avatarPath: faker.image.avatar(),
 				phone: faker.phone.number('+7 (###) ###-##-##'),
 				password: await hash(dto.password)

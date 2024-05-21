@@ -54,10 +54,10 @@ let ReviewService = class ReviewService {
             .then(data => data._avg);
     }
 };
-exports.ReviewService = ReviewService;
-exports.ReviewService = ReviewService = __decorate([
+ReviewService = __decorate([
     (0, common_1.Injectable)(),
     __metadata("design:paramtypes", [prisma_service_1.PrismaService,
         product_service_1.ProductService])
 ], ReviewService);
+exports.ReviewService = ReviewService;
 //# sourceMappingURL=review.service.js.map

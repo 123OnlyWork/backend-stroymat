@@ -16,8 +16,8 @@ let PaginationService = class PaginationService {
         return { perPage, skip };
     }
 };
-exports.PaginationService = PaginationService;
-exports.PaginationService = PaginationService = __decorate([
+PaginationService = __decorate([
     (0, common_1.Injectable)()
 ], PaginationService);
+exports.PaginationService = PaginationService;
 //# sourceMappingURL=pagination.service.js.map

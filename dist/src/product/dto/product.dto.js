@@ -13,7 +13,6 @@ exports.ProductDto = void 0;
 const class_validator_1 = require("class-validator");
 class ProductDto {
 }
-exports.ProductDto = ProductDto;
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
@@ -36,4 +35,5 @@ __decorate([
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], ProductDto.prototype, "categoryId", void 0);
+exports.ProductDto = ProductDto;
 //# sourceMappingURL=product.dto.js.map

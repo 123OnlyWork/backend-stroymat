@@ -13,12 +13,12 @@ const category_controller_1 = require("./category.controller");
 const category_service_1 = require("./category.service");
 let CategoryModule = class CategoryModule {
 };
-exports.CategoryModule = CategoryModule;
-exports.CategoryModule = CategoryModule = __decorate([
+CategoryModule = __decorate([
     (0, common_1.Module)({
         controllers: [category_controller_1.CategoryController],
         providers: [category_service_1.CategoryService, prisma_service_1.PrismaService],
         exports: [category_service_1.CategoryService]
     })
 ], CategoryModule);
+exports.CategoryModule = CategoryModule;
 //# sourceMappingURL=category.module.js.map

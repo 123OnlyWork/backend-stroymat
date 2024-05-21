@@ -15,7 +15,6 @@ const class_transformer_1 = require("class-transformer");
 const class_validator_1 = require("class-validator");
 class OrderDto {
 }
-exports.OrderDto = OrderDto;
 __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsEnum)(client_1.EnumOrderStatus),
@@ -27,9 +26,9 @@ __decorate([
     (0, class_transformer_1.Type)(() => OrderItemDto),
     __metadata("design:type", Array)
 ], OrderDto.prototype, "items", void 0);
+exports.OrderDto = OrderDto;
 class OrderItemDto {
 }
-exports.OrderItemDto = OrderItemDto;
 __decorate([
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
@@ -42,4 +41,5 @@ __decorate([
     (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], OrderItemDto.prototype, "productId", void 0);
+exports.OrderItemDto = OrderItemDto;
 //# sourceMappingURL=order.dto.js.map

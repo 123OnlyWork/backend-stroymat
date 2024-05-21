@@ -54,7 +54,7 @@ let AuthService = class AuthService {
         const user = await this.prisma.user.create({
             data: {
                 email: dto.email,
-                name: faker_1.faker.person.firstName(),
+                name: faker_1.faker.name.firstName(),
                 avatarPath: faker_1.faker.image.avatar(),
                 phone: faker_1.faker.phone.number('+7 (###) ###-##-##'),
                 password: await (0, argon2_1.hash)(dto.password)
@@ -97,11 +97,11 @@ let AuthService = class AuthService {
         return user;
     }
 };
-exports.AuthService = AuthService;
-exports.AuthService = AuthService = __decorate([
+AuthService = __decorate([
     (0, common_1.Injectable)(),
     __metadata("design:paramtypes", [prisma_service_1.PrismaService,
         jwt_1.JwtService,
         user_service_1.UserService])
 ], AuthService);
+exports.AuthService = AuthService;
 //# sourceMappingURL=auth.service.js.map

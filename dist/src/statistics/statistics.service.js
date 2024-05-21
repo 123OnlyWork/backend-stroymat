@@ -45,9 +45,9 @@ let StatisticsService = class StatisticsService {
         ];
     }
 };
-exports.StatisticsService = StatisticsService;
-exports.StatisticsService = StatisticsService = __decorate([
+StatisticsService = __decorate([
     (0, common_1.Injectable)(),
     __metadata("design:paramtypes", [prisma_service_1.PrismaService])
 ], StatisticsService);
+exports.StatisticsService = StatisticsService;
 //# sourceMappingURL=statistics.service.js.map

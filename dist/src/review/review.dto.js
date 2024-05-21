@@ -13,7 +13,6 @@ exports.ReviewDto = void 0;
 const class_validator_1 = require("class-validator");
 class ReviewDto {
 }
-exports.ReviewDto = ReviewDto;
 __decorate([
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.Min)(1),
@@ -24,4 +23,5 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], ReviewDto.prototype, "text", void 0);
+exports.ReviewDto = ReviewDto;
 //# sourceMappingURL=review.dto.js.map

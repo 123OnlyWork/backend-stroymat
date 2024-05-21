@@ -4,90 +4,33 @@ export declare class CategoryService {
     private prisma;
     constructor(prisma: PrismaService);
     byId(id: number): Promise<{
-        id?: number;
         createdAt?: Date;
         updatedAt?: Date;
         name?: string;
         slug?: string;
-        _count?: {
-            products: number;
-        };
-        products?: (import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            name: string;
-            slug: string;
-            description: string;
-            price: number;
-            images: string[];
-            categoryId: number;
-            userId: number;
-        }, unknown> & {})[];
+        id?: number;
+        _count?: import(".prisma/client").Prisma.CategoryCountOutputType;
+        products?: import(".prisma/client").Product[];
     }>;
     bySlug(slug: string): Promise<{
-        id?: number;
         createdAt?: Date;
         updatedAt?: Date;
         name?: string;
         slug?: string;
-        _count?: {
-            products: number;
-        };
-        products?: (import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            name: string;
-            slug: string;
-            description: string;
-            price: number;
-            images: string[];
-            categoryId: number;
-            userId: number;
-        }, unknown> & {})[];
+        id?: number;
+        _count?: import(".prisma/client").Prisma.CategoryCountOutputType;
+        products?: import(".prisma/client").Product[];
     }>;
     getAll(): Promise<{
-        id?: number;
         createdAt?: Date;
         updatedAt?: Date;
         name?: string;
         slug?: string;
-        _count?: {
-            products: number;
-        };
-        products?: (import("@prisma/client/runtime").GetResult<{
-            id: number;
-            createdAt: Date;
-            updatedAt: Date;
-            name: string;
-            slug: string;
-            description: string;
-            price: number;
-            images: string[];
-            categoryId: number;
-            userId: number;
-        }, unknown> & {})[];
+        id?: number;
+        _count?: import(".prisma/client").Prisma.CategoryCountOutputType;
+        products?: import(".prisma/client").Product[];
     }[]>;
-    create(): Promise<import("@prisma/client/runtime").GetResult<{
-        id: number;
-        createdAt: Date;
-        updatedAt: Date;
-        name: string;
-        slug: string;
-    }, unknown> & {}>;
-    update(id: number, dto: CategoryDto): Promise<import("@prisma/client/runtime").GetResult<{
-        id: number;
-        createdAt: Date;
-        updatedAt: Date;
-        name: string;
-        slug: string;
-    }, unknown> & {}>;
-    delete(id: number): Promise<import("@prisma/client/runtime").GetResult<{
-        id: number;
-        createdAt: Date;
-        updatedAt: Date;
-        name: string;
-        slug: string;
-    }, unknown> & {}>;
+    create(): Promise<import(".prisma/client").Category>;
+    update(id: number, dto: CategoryDto): Promise<import(".prisma/client").Category>;
+    delete(id: number): Promise<import(".prisma/client").Category>;
 }

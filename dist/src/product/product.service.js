@@ -216,11 +216,11 @@ let ProductService = class ProductService {
         return this.prisma.product.delete({ where: { id } });
     }
 };
-exports.ProductService = ProductService;
-exports.ProductService = ProductService = __decorate([
+ProductService = __decorate([
     (0, common_1.Injectable)(),
     __metadata("design:paramtypes", [prisma_service_1.PrismaService,
         pagination_service_1.PaginationService,
         category_service_1.CategoryService])
 ], ProductService);
+exports.ProductService = ProductService;
 //# sourceMappingURL=product.service.js.map

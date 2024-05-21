@@ -88,9 +88,9 @@ let UserService = class UserService {
         return { message: 'Success' };
     }
 };
-exports.UserService = UserService;
-exports.UserService = UserService = __decorate([
+UserService = __decorate([
     (0, common_1.Injectable)(),
     __metadata("design:paramtypes", [prisma_service_1.PrismaService])
 ], UserService);
+exports.UserService = UserService;
 //# sourceMappingURL=user.service.js.map

@@ -18,10 +18,9 @@ var EnumProductSort;
     EnumProductSort["LOW_PRICE"] = "low-price";
     EnumProductSort["NEWEST"] = "newest";
     EnumProductSort["OLDEST"] = "oldest";
-})(EnumProductSort || (exports.EnumProductSort = EnumProductSort = {}));
+})(EnumProductSort = exports.EnumProductSort || (exports.EnumProductSort = {}));
 class GetAllProductDto extends pagination_dto_1.PaginationDto {
 }
-exports.GetAllProductDto = GetAllProductDto;
 __decorate([
     (0, class_validator_1.IsOptional)(),
     (0, class_validator_1.IsEnum)(EnumProductSort),
@@ -52,4 +51,5 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], GetAllProductDto.prototype, "categoryId", void 0);
+exports.GetAllProductDto = GetAllProductDto;
 //# sourceMappingURL=get-all.product.dto.js.map

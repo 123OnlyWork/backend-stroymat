@@ -11,11 +11,11 @@ const common_1 = require("@nestjs/common");
 const pagination_service_1 = require("./pagination.service");
 let PaginationModule = class PaginationModule {
 };
-exports.PaginationModule = PaginationModule;
-exports.PaginationModule = PaginationModule = __decorate([
+PaginationModule = __decorate([
     (0, common_1.Module)({
         providers: [pagination_service_1.PaginationService],
         exports: [pagination_service_1.PaginationService]
     })
 ], PaginationModule);
+exports.PaginationModule = PaginationModule;
 //# sourceMappingURL=pagination.module.js.map

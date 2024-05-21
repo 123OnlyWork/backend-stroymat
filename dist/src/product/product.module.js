@@ -16,12 +16,12 @@ const product_controller_1 = require("./product.controller");
 const product_service_1 = require("./product.service");
 let ProductModule = class ProductModule {
 };
-exports.ProductModule = ProductModule;
-exports.ProductModule = ProductModule = __decorate([
+ProductModule = __decorate([
     (0, common_1.Module)({
         controllers: [product_controller_1.ProductController],
         imports: [pagination_module_1.PaginationModule, category_module_1.CategoryModule],
         providers: [product_service_1.ProductService, prisma_service_1.PrismaService, pagination_service_1.PaginationService]
     })
 ], ProductModule);
+exports.ProductModule = ProductModule;
 //# sourceMappingURL=product.module.js.map

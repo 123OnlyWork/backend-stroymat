@@ -31,7 +31,6 @@ let AuthController = class AuthController {
         return this.authService.register(dto);
     }
 };
-exports.AuthController = AuthController;
 __decorate([
     (0, common_1.UsePipes)(new common_1.ValidationPipe()),
     (0, common_1.HttpCode)(200),
@@ -59,8 +58,9 @@ __decorate([
     __metadata("design:paramtypes", [auth_dto_1.AuthDto]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "register", null);
-exports.AuthController = AuthController = __decorate([
+AuthController = __decorate([
     (0, common_1.Controller)('auth'),
     __metadata("design:paramtypes", [auth_service_1.AuthService])
 ], AuthController);
+exports.AuthController = AuthController;
 //# sourceMappingURL=auth.controller.js.map

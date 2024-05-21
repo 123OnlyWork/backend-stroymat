@@ -74,9 +74,9 @@ let CategoryService = class CategoryService {
         });
     }
 };
-exports.CategoryService = CategoryService;
-exports.CategoryService = CategoryService = __decorate([
+CategoryService = __decorate([
     (0, common_1.Injectable)(),
     __metadata("design:paramtypes", [prisma_service_1.PrismaService])
 ], CategoryService);
+exports.CategoryService = CategoryService;
 //# sourceMappingURL=category.service.js.map
